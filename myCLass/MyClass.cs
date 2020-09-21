@@ -52,7 +52,11 @@ namespace EK_Home_POS.myCLass
         {
             SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM stock", con);
             DataTable dt = new DataTable();
+            DataSet ds = new DataSet();
+            //SqlCommand sql = new SqlCommand()
+
             sda.Fill(dt);
+            //sda.Fill(ds, "All");
             BindingSource bSource = new BindingSource();
             bSource.DataSource = dt;
             return bSource;
